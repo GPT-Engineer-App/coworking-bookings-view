@@ -39,7 +39,7 @@ const Index = () => {
                 <Text>{booking.date}</Text>
               </HStack>
             </VStack>
-            <HStack>
+            <HStack spacing={4}>
               <FaUserFriends />
               {booking.colleagues.map((colleague) => (
                 <Tag size="lg" key={colleague.name} borderRadius="full">
@@ -47,6 +47,7 @@ const Index = () => {
                   {colleague.name}
                 </Tag>
               ))}
+              <Button colorScheme="blue">Book Now</Button>
             </HStack>
           </Flex>
         ))}
